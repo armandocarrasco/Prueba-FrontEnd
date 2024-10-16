@@ -1,0 +1,65 @@
+<section class="appointment-section">
+  <header class="appointment-header">
+    <div class="header-content">
+      <h2 class="header-title">MAKE AN <span class="highlight">APPOINTMENT</span></h2>
+      <div class="header-underline"></div>
+    </div>
+    <h3 class="header-subtitle">
+      <span>Consult with our</span> <br />
+      <span class="highlight">{{ appointmentData.doctor }}</span> 
+    </h3>
+  </header>
+  <div class="appointment-content">
+    <img src="img\appointment.png" alt="Doctor consultation" class="appointment-image" />
+    <form class="appointment-form" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Full name" [(ngModel)]="appointmentData.name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone</label>
+          <div class="phone-input">
+            <select id="country-code" name="countryCode" class="country-select" [(ngModel)]="appointmentData.countryCode">
+              <option value="+01">+01</option>
+              <option value="+52">+</option>
+
+            </select>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 000-0000" [(ngModel)]="appointmentData.phone" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="date" class="form-label">Date</label>
+          <input type="date" id="date" name="date" class="form-input" [(ngModel)]="appointmentData.date" required>
+        </div>
+        <div class="form-group">
+          <label for="doctorSelect" >Select a Doctor:</label>
+          <select
+          class="doctor-select" 
+          id="doctor"
+          [(ngModel)]="appointmentData.doctor"
+          name="doctor"
+          required
+        >
+          <option value="" disabled>Select a doctor</option>
+          <option *ngFor="let doctor of doctors" [value]="doctor.name">{{ doctor.name }}</option>
+        </select>      
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" class="form-input" rows="4" placeholder="Include a message..." [(ngModel)]="appointmentData.message"></textarea>
+      </div>
+      <div class="form-footer">
+        <label class="checkbox-container">
+          <input type="checkbox" name="privacy-policy" [(ngModel)]="appointmentData.agreeToPolicy" required>
+          <span class="checkmark"></span>
+          You agree to our friendly &nbsp;<a class="policy-link"> privacy policy</a>
+        </label>
+        <button type="submit" class="submit-btn" [disabled]="!appointmentData.agreeToPolicy">Confirm Appointment</button>
+      </div>
+    </form>
+  </div>
+</section>

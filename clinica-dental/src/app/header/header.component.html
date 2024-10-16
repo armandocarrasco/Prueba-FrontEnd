@@ -1,0 +1,28 @@
+
+  <header class="header">
+    <nav class="navigation">
+      <div class="logo-container">
+        <img loading="lazy" src="img/logo2.png" class="logo-image" alt="Dentics logo" />
+        <span class="logo-text">Dentics</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="" class="nav-link" [class.active]="activeSection === 'home'" (click)="setActiveSection('home')">Home</a>
+        </li>
+        <li>
+          <a href="#services" class="nav-link" [class.active]="activeSection === 'services'" (click)="setActiveSection('services')">Services</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link" [class.active]="activeSection === 'about'" (click)="setActiveSection('about')">About Us</a>
+        </li>
+        <li>
+          <a href="#register" class="nav-link" [class.active]="activeSection === 'register'" (click)="setActiveSection('register')">Register</a>
+        </li>
+      </ul>
+  
+      <a href="#appointment" (click)="setActiveSection('appointment')">
+        <button class="appointment-btn">Appointment</button>
+      </a>
+    </nav>
+  </header>
+  

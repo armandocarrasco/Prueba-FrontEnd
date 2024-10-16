@@ -1,0 +1,172 @@
+:host {
+    display: contents;
+  }
+  
+  .landing-page {
+    background-color: #fff;
+    padding: 0 80px 0 0;
+    overflow: hidden;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  .img {
+    max-width: 100%; 
+    height: auto;   
+  }
+  
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #f4f5f7;
+    padding: 242px 80px;
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .welcome-text {
+    max-width: 413px;
+  }
+  
+  .welcome-title {
+    color: #191919;
+    font-size: 40px;
+    line-height: 60px;
+    margin: 0;
+  }
+  
+  .welcome-title-bold {
+    font-weight: 700;
+  }
+  
+  .welcome-description {
+    color: #656565;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 32px;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 20px;
+    justify-content: center;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Inter, sans-serif;
+  }
+  
+  .contact-info {
+    max-width: 682px;
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    line-height: 42px;
+  }
+  
+  .contact-email {
+    font-size: 32px;
+    color: #006aff;
+    text-decoration: none;
+  }
+  
+  .divider {
+    background-color: #c9c9c9;
+    height: 2px;
+    width: 200px;
+    margin: 56px 0;
+  }
+  
+  .explore-section {
+    text-align: center;
+    max-width: 625px;
+  }
+  
+  .explore-text {
+    font-size: 24px;
+    color: #000;
+  }
+  
+  .explore-link {
+    color: #516eff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  
+  .download-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 625px;
+  }
+  
+  .download-title {
+    color: #000;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .download-button {
+    border-radius: 50px;
+    background-color: #006aff;
+    margin-top: 40px;
+    font-size: 32px;
+    color: #fff;
+    padding: 24px 64px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    .landing-page {
+      padding-right: 20px;
+    }
+  
+    .content-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  
+    .welcome-section,
+    .contact-section {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .welcome-section {
+      margin-top: 40px;
+      padding: 100px 20px;
+    }
+  
+    .contact-section {
+      margin-top: 40px;
+    }
+  
+    .contact-info,
+    .explore-section,
+    .download-section {
+      max-width: 100%;
+    }
+  
+    .divider {
+      margin: 40px 0;
+    }
+  
+    .download-button {
+      padding: 24px 20px;
+      width: 100%;
+    }
+  }

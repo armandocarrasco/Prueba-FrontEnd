@@ -1,0 +1,43 @@
+<section class="newsletter">
+    <div class="newsletter-container">
+      <div class="illustration-left">
+        <img src="img/izq.png" alt="" class="illustration-image" />
+      </div>
+      <form class="subscription-form" (ngSubmit)="onSubmit()">
+        <h2 class="form-header">Subscribe to our newsletter</h2>
+        <div class="input-group">
+          <div class="input-wrapper">
+            <label for="firstName" class="visually-hidden">First name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              [(ngModel)]="firstName"
+              placeholder="First name"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="email" class="visually-hidden">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="email"
+              placeholder="Email address"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+  
+          <button type="submit" class="submit-button">Subscribe Now</button>
+  </div>
+        </div>
+      </form>
+      <div class="illustration-right">
+        <img src="img/der.png" alt="" class="illustration-image" />
+      </div>
+    </div>
+  </section>

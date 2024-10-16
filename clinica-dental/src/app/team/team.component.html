@@ -1,0 +1,41 @@
+<section class="team-section">
+  <div class="team-header">
+    <h2 class="main-title">
+      <span class="subtitle">Meet Some of Our</span>
+      <br />
+      <span class="title-highlight">Brains</span>
+    </h2>
+    <div class="team-subtitle">
+      <h3 class="secondary-title">
+        <span class="subtitle-text">MEET OUR </span>
+        <span class="subtitle-highlight"> DOCTORS</span>
+      </h3>
+      <div class="subtitle-underline"></div>
+    </div>
+  </div>
+  <div class="team-divider"></div>
+  <div class="team-list">
+    <button class="arrow-button left-arrow" (click)="prevDoctor()" aria-label="Previous doctors" [disabled]="currentIndex === 0">
+      <img src="img/arrowLeft.png" />
+    </button>
+    <div class="doctor-list">
+      <div class="doctor-card" *ngFor="let doctor of displayedDoctors">
+        <img *ngIf="doctor.photo; else placeholder" [src]="doctor.photo" alt="{{ doctor.name }}" class="doctor-image" />
+        <ng-template #placeholder>
+          <div class="doctor-image placeholder-image"></div> 
+        </ng-template>
+        <div class="doctor-info">
+          <h3 class="doctor-name">{{ doctor.name }}</h3>
+          <p class="doctor-specialty">{{ doctor.specialty }}</p>
+          <p class="doctor-school">{{ doctor.university }}</p>
+          <a class="appointment-button" (click)="selectDoctor(doctor.name)">Make Appointment</a>
+        </div>
+      </div>
+      </div>
+    <button class="arrow-button right-arrow" (click)="nextDoctor()" aria-label="Next doctors" [disabled]="currentIndex >= doctors.length - visibleDoctors">
+      <img src="img/arrowRight.png"  />
+    </button>
+  </div>
+  <div class="team-divider"></div>
+</section>
+
